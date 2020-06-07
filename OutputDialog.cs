@@ -7,5 +7,9 @@ namespace RSAKeyGen {
 			this.pub.Text = pub;
 			this.priv.Text = priv;
 		}
+
+		private void pub_MouseClick(object sender, MouseEventArgs e) => pub.SelectAll();
+
+		private void priv_MouseClick(object sender, MouseEventArgs e) => priv.SelectAll();
 	}
 }

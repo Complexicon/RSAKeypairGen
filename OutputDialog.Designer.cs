@@ -24,11 +24,11 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
 			this.pub = new System.Windows.Forms.RichTextBox();
-			this.priv = new System.Windows.Forms.RichTextBox();
+			this.panel1 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
+			this.priv = new System.Windows.Forms.RichTextBox();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
@@ -59,6 +59,19 @@
 			this.splitContainer1.SplitterWidth = 1;
 			this.splitContainer1.TabIndex = 0;
 			// 
+			// pub
+			// 
+			this.pub.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.pub.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pub.Location = new System.Drawing.Point(0, 23);
+			this.pub.Name = "pub";
+			this.pub.ReadOnly = true;
+			this.pub.Size = new System.Drawing.Size(517, 561);
+			this.pub.TabIndex = 1;
+			this.pub.Text = "";
+			this.pub.WordWrap = false;
+			this.pub.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pub_MouseClick);
+			// 
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.label1);
@@ -68,37 +81,6 @@
 			this.panel1.Size = new System.Drawing.Size(517, 23);
 			this.panel1.TabIndex = 0;
 			// 
-			// panel2
-			// 
-			this.panel2.Controls.Add(this.label2);
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(0, 0);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(517, 23);
-			this.panel2.TabIndex = 0;
-			// 
-			// pub
-			// 
-			this.pub.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.pub.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pub.Location = new System.Drawing.Point(0, 23);
-			this.pub.Name = "pub";
-			this.pub.Size = new System.Drawing.Size(517, 561);
-			this.pub.TabIndex = 1;
-			this.pub.Text = "";
-			this.pub.WordWrap = false;
-			// 
-			// priv
-			// 
-			this.priv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.priv.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.priv.Location = new System.Drawing.Point(0, 23);
-			this.priv.Name = "priv";
-			this.priv.Size = new System.Drawing.Size(517, 561);
-			this.priv.TabIndex = 1;
-			this.priv.Text = "";
-			this.priv.WordWrap = false;
-			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
@@ -107,6 +89,28 @@
 			this.label1.Size = new System.Drawing.Size(36, 13);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Public";
+			// 
+			// priv
+			// 
+			this.priv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.priv.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.priv.Location = new System.Drawing.Point(0, 23);
+			this.priv.Name = "priv";
+			this.priv.ReadOnly = true;
+			this.priv.Size = new System.Drawing.Size(517, 561);
+			this.priv.TabIndex = 1;
+			this.priv.Text = "";
+			this.priv.WordWrap = false;
+			this.priv.MouseClick += new System.Windows.Forms.MouseEventHandler(this.priv_MouseClick);
+			// 
+			// panel2
+			// 
+			this.panel2.Controls.Add(this.label2);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel2.Location = new System.Drawing.Point(0, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(517, 23);
+			this.panel2.TabIndex = 0;
 			// 
 			// label2
 			// 
@@ -125,7 +129,7 @@
 			this.Controls.Add(this.splitContainer1);
 			this.Name = "OutputDialog";
 			this.ShowIcon = false;
-			this.Text = "OutputDialog";
+			this.Text = "Here\'s your Keys";
 			this.splitContainer1.Panel1.ResumeLayout(false);
 			this.splitContainer1.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
